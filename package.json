@@ -1,0 +1,51 @@
+{
+  "name": "hobnob",
+  "description": "Simplest way to test your interactive command-line app.",
+  "version": "0.0.0",
+  "author": "Yasuaki Uechi <y@uechi.io>",
+  "scripts": {
+    "build": "npm run tsup -- --minify --dts",
+    "clean": "shx rm -rf lib",
+    "dev": "npm run tsup -- --watch",
+    "pretest": "npm run tsup",
+    "test": "jest",
+    "tsup": "tsup src/index.ts -d lib"
+  },
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "cross-spawn": "^7.0.3",
+    "debug": "^4.1.1",
+    "eventemitter3": "^4.0.4"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.2",
+    "@types/debug": "^4.1.5",
+    "@types/jest": "^26.0.10",
+    "@types/node": "^14.0.27",
+    "jest": "^26.4.0",
+    "shx": "^0.3.2",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^8.10.2",
+    "tsup": "^3.4.3",
+    "typescript": "^3.9.7"
+  },
+  "homepage": "https://github.com/uetchy/hobnob",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uetchy/hobnob.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uetchy/hobnob/issues"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "cli",
+    "hobnob",
+    "interactive",
+    "test"
+  ]
+}
