@@ -3,7 +3,7 @@
 ## Development Guide
 
 ```bash
-git clone https://github.com/uetchy/hobnob.git && cd hobnob
+git clone https://github.com/uetchy/logue.git && cd logue
 npm install
 npm run dev
 ```

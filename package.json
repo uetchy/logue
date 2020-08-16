@@ -1,5 +1,5 @@
 {
-  "name": "hobnob",
+  "name": "logue",
   "description": "Simplest way to test your interactive command-line app.",
   "version": "0.0.0",
   "author": "Yasuaki Uechi <y@uechi.io>",
@@ -33,18 +33,18 @@
     "tsup": "^3.4.3",
     "typescript": "^3.9.7"
   },
-  "homepage": "https://github.com/uetchy/hobnob",
+  "homepage": "https://github.com/uetchy/logue",
   "repository": {
     "type": "git",
-    "url": "https://github.com/uetchy/hobnob.git"
+    "url": "https://github.com/uetchy/logue.git"
   },
   "bugs": {
-    "url": "https://github.com/uetchy/hobnob/issues"
+    "url": "https://github.com/uetchy/logue/issues"
   },
   "license": "Apache-2.0",
   "keywords": [
     "cli",
-    "hobnob",
+    "logue",
     "interactive",
     "test"
   ]

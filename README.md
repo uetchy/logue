@@ -1,27 +1,27 @@
-# hobnob
+# logue
 
-[![npm](https://badgen.net/npm/v/hobnob)][npm-url]
-[![npm: total downloads](https://badgen.net/npm/dt/hobnob)][npm-url]
+[![npm](https://badgen.net/npm/v/logue)][npm-url]
+[![npm: total downloads](https://badgen.net/npm/dt/logue)][npm-url]
 
-[npm-url]: https://npmjs.org/package/hobnob
+[npm-url]: https://npmjs.org/package/logue
 
 Simplest way to test your interactive command-line app.
 
 ## Install
 
 ```bash
-npm i --save hobnob
+npm i --save logue
 # or
-yarn add hobnob
+yarn add logue
 ```
 
 ## Example (Jest)
 
 ```js
-import hobnob from 'hobnob'
+import logue from 'logue'
 
 it('test', async () => {
-  const app = hobnob('my-cli-app', ['put', '--args', 'here']) // spawn
+  const app = logue('my-cli-app', ['put', '--args', 'here']) // spawn
 
   await app.waitFor('continue?') // wait until 'continue?' appears in stdout
   expect(app.stdout).toContain('[yes/no]')
@@ -35,7 +35,7 @@ it('test', async () => {
 Also, uou can just chain all of methods:
 
 ```js
-const app = await hobnob(args).waitFor('continue?').input('y').end()
+const app = await logue(args).waitFor('continue?').input('y').end()
 expect(app.stdout).toContain('Done!')
 ```
 

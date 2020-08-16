@@ -1,4 +1,4 @@
-import hobnob from '..'
+import logue from '..'
 import path from 'path'
 
 function cliPath(name: string = 'cli') {
@@ -6,7 +6,7 @@ function cliPath(name: string = 'cli') {
 }
 
 it('multiple awaits', async () => {
-  const app = hobnob(cliPath())
+  const app = logue(cliPath())
 
   await app.waitFor('Answer')
   expect(app.stdout).toBe('Answer?: ')
@@ -18,11 +18,11 @@ it('multiple awaits', async () => {
 })
 
 it('chainable', async () => {
-  const app = await hobnob(cliPath()).waitFor('Answer?').input('OK').end()
+  const app = await logue(cliPath()).waitFor('Answer?').input('OK').end()
   expect(app.stdout).toBe('Answer?: Your answer is OK!\n')
 })
 
 it('simple', async () => {
-  const app = await hobnob(cliPath('simple')).end()
+  const app = await logue(cliPath('simple')).end()
   expect(app.stdout).toBe('A\nB\n')
 })

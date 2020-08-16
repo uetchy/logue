@@ -3,14 +3,14 @@ import EventEmitter from 'eventemitter3'
 import { ChildProcess } from 'child_process'
 import initDebug from 'debug'
 
-const log = initDebug('hobnob')
+const log = initDebug('logue')
 
-export default function hobnob(command: string, args: string[] = []) {
-  return new Hobnob(command, args)
+export default function logue(command: string, args: string[] = []) {
+  return new Logue(command, args)
 }
 
 // @ts-ignore
-export class Hobnob extends Promise {
+export class Logue extends Promise {
   private proc: ChildProcess
   private event: EventEmitter
   private stack: ((...args: any) => Promise<any>)[]
