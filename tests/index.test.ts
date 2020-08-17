@@ -7,14 +7,18 @@ function cliPath(name: string = 'cli') {
 
 it('multiple awaits', async () => {
   const app = logue(cliPath())
+  expect(app.status).toBe('running')
+  expect(app.line).toBe('')
 
   await app.waitFor('Answer')
+  expect(app.status).toBe('running')
   expect(app.stdout).toBe('Answer?: ')
-  expect(app.currentLine).toBe('Answer?: ')
+  expect(app.line).toBe('Answer?: ')
 
   await app.input('Hi').end()
+  expect(app.status).toBe('settled')
   expect(app.stdout).toBe('Answer?: Your answer is Hi!\n')
-  expect(app.currentLine).toBe('Your answer is Hi!\n')
+  expect(app.line).toBe('Your answer is Hi!\n')
 })
 
 it('chainable', async () => {
@@ -23,6 +27,6 @@ it('chainable', async () => {
 })
 
 it('simple', async () => {
-  const app = await logue(cliPath('simple')).end()
+  const app = await logue(cliPath('simple'))
   expect(app.stdout).toBe('A\nB\n')
 })

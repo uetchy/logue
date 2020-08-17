@@ -7,7 +7,7 @@
     "build": "npm run tsup -- --minify --dts",
     "clean": "shx rm -rf lib",
     "dev": "npm run tsup -- --watch",
-    "pretest": "npm run tsup",
+    "pretest": "npm run build",
     "test": "jest",
     "tsup": "tsup src/index.ts -d lib"
   },
@@ -44,8 +44,8 @@
   "license": "Apache-2.0",
   "keywords": [
     "cli",
-    "logue",
     "interactive",
+    "logue",
     "test"
   ]
 }
