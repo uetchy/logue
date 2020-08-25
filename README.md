@@ -5,7 +5,7 @@
 
 [npm-url]: https://npmjs.org/package/logue
 
-Simplest way to test your interactive command-line app.
+The tiny yet powerful test utility for interactive command-line apps.
 
 ## Install
 
@@ -21,7 +21,7 @@ yarn add logue
 import logue from 'logue'
 
 it('test', async () => {
-  const app = logue('my-cli-app', ['put', '--args', 'here']) // spawn
+  const app = logue('./my-cli-app.js', ['put', '--args', 'here']) // spawn
 
   await app.waitFor('continue?') // wait until 'continue?' appears in stdout
   expect(app.stdout).toContain('[yes/no]')
@@ -35,13 +35,13 @@ it('test', async () => {
 Also, uou can just chain all of methods:
 
 ```js
-const app = await logue(args).waitFor('continue?').input('y').end()
-expect(app.stdout).toContain('Done!')
+const result = await logue(args).waitFor("continue?").input("y").end();
+expect(result.stdout).toContain("Done!");
 ```
 
 ## API
 
-> Help!
+> Soon
 
 ## Contributing
 
