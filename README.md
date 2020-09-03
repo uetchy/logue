@@ -2,6 +2,7 @@
 
 [![npm](https://badgen.net/npm/v/logue)][npm-url]
 [![npm: total downloads](https://badgen.net/npm/dt/logue)][npm-url]
+[![Actions Status: test](https://github.com/uetchy/logue/workflows/test/badge.svg)](https://github.com/uetchy/logue/actions?query=test)
 
 [npm-url]: https://npmjs.org/package/logue
 
@@ -18,17 +19,17 @@ yarn add logue
 ## Example (Jest)
 
 ```js
-import logue from 'logue'
+import logue from "logue"
 
-it('test', async () => {
-  const app = logue('./my-cli-app.js', ['put', '--args', 'here']) // spawn
+it("test", async () => {
+  const app = logue("./my-cli-app.js", ["put", "--args", "here"]) // spawn
 
-  await app.waitFor('continue?') // wait until 'continue?' appears in stdout
-  expect(app.stdout).toContain('[yes/no]')
+  await app.waitFor("continue?") // wait until "continue?" appears in stdout
+  expect(app.stdout).toContain("[yes/no]")
 
-  await app.input('yes') // write 'yes' to stdin
+  await app.input("yes") // write "yes" to stdin
   await app.end() // wait for the process to be completed
-  expect(app.stdout).toContain('Done!')
+  expect(app.stdout).toContain("Done!")
 }
 ```
 
@@ -45,4 +46,4 @@ expect(result.stdout).toContain("Done!");
 
 ## Contributing
 
-See [Contribution Guide](./CONTRIBUTING.md).
+See [Contribution guide](./CONTRIBUTING.md).
