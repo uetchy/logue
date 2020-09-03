@@ -1,7 +1,7 @@
 {
   "name": "logue",
   "description": "Simplest way to test your interactive command-line app.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Yasuaki Uechi <y@uechi.io>",
   "scripts": {
     "build": "npm run tsup -- --minify --dts",
