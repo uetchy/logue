@@ -7,6 +7,7 @@
     "build": "npm run tsup -- --minify --dts",
     "clean": "shx rm -rf lib",
     "dev": "npm run tsup -- --watch",
+    "prepublishOnly": "npm run clean && npm run build",
     "pretest": "npm run build",
     "test": "jest",
     "tsup": "tsup src/index.ts -d lib"

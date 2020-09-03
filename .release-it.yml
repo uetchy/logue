@@ -5,7 +5,7 @@ github:
   release: true
   releaseName: "v${version}"
 hooks: # https://github.com/release-it/release-it#hooks
-  before:init: npm test
+  after:init: npm test
 plugins:
   "@release-it/conventional-changelog": # https://github.com/release-it/conventional-changelog
     preset: angular
