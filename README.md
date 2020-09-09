@@ -33,7 +33,7 @@ it("test", async () => {
 }
 ```
 
-Also, uou can just chain all of methods:
+Also, you can just chain all of methods:
 
 ```js
 const result = await logue(args).waitFor("continue?").input("y").end();
